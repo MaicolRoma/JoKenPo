@@ -5,7 +5,10 @@ Juego de Piedra, Papel y Tijera
 
 Este es el antiguo y bien conocido juego de piedra, papel y tijera, 
 con algunas animaciones funcionalidades para hacerlo mas entretenido.
-##
+
+
+## link: https://maicolroma.github.io/JoKenPo/
+
 ## Funcionalidades:
 - Contador de las Rondas
 - Contador de las Rachas
