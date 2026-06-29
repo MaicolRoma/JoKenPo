@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="jokenpo">
+    <!-- font Iris -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <!--Font iceberg -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Irish+Grover&display=swap" rel="stylesheet">
+    <!-- favicons -->
+    <link rel="shortcut icon" href="./assets/img/favicons/pedra-papel-tesoura.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./stylo.css">
+    <title>JokenPô</title>
+</head>
+
+<body>
+    <main class="container-jogo">
+
+        <section class="container-human">
+        <h2>Jugador</h2>
+        <div class="container-buttons">
+            <button type="button" class="buttonRock" id="rock" aria-label="Piedra" onclick="playHuman('rock')">&#x1F44A;</button>
+            <button type="button" class="buttonPaper" id="paper" aria-label="Papel" onclick="playHuman('paper')">&#x1f590;</button>
+            <button type="button" class="buttonScissors" id="scissors" aria-label="Tijera" onclick="playHuman('scissors')">&#x270c;</button>
+        </div>
+        <div class="container-score">
+            <h3 class="text-score">Mi puntuación</h3>
+            <p id="human-score" class="scoreStyle shadowDefeat">0</p>
+        </div>
+        </section>
+        
+        <section class="container-battle">
+            <div class="hud">
+                <div>
+                    <span>Ronda</span>
+                    <strong id="round-count">0</strong>
+                </div>
+                <div>
+                    <span>Racha</span>
+                    <strong id="streak-count">0</strong>
+                </div>
+                <div>
+                    <span>Meta</span>
+                    <strong id="target-score">5</strong>
+                </div>
+            </div>
+
+            <p class="result" aria-live="polite">Elige tu jugada</p>
+            <div class="container-comparations">
+                <div class="container-playerMove" id="playerMove">?</div>
+                <h1>JokenPô</h1>
+                <div class="container-machineMove" id="machineMove">?</div>
+            </div>
+
+            <p class="battle-subtitle" id="battle-subtitle">Gana 5 puntos antes que la máquina.</p>
+
+            <div class="controls">
+                <button type="button" id="reset-game">Reiniciar</button>
+                <button type="button" id="toggle-sound">Sonido ON</button>
+            </div>
+
+            <ol class="history" id="history" aria-label="Historial de rondas"></ol>
+        </section>
+
+        <section class="container-machine" >
+        <h2>Máquina</h2>
+        <div class="container-buttons">
+            <button type="button" id="machine-rock" aria-label="Piedra de la máquina">&#x1F44A;</button>
+            <button type="button" id="machine-paper" aria-label="Papel de la máquina">&#x1f590;</button>
+            <button type="button" id="machine-scissors" aria-label="Tijera de la máquina">&#x270c;</button>
+        </div>
+        <div class="container-score">
+            <h3 class="text-score">Puntuación máquina</h3>
+            <p id="machine-score" class="scoreStyle shadowDefeat">0</p>
+        </div>
+        </section>
+
+
+
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
